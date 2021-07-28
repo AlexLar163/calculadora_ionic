@@ -1,0 +1,6 @@
+{
+	"appId": "com.example.app",
+	"appName": "practicaIonic",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

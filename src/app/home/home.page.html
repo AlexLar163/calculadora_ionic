@@ -1,8 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title> Blank </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -12,9 +10,145 @@
       <ion-title size="large">Blank</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-grid class="container-fluid bg-primary p-3" style="width: auto">
+    <!-- <h2 class="text-center text-white font-weight-bold">Calculadora</h2> -->
+    <ion-input
+      [(ngModel)]="numCurrent"
+      type="text"
+      class="w-100"
+      style="height: 3rem"
+    >
+    </ion-input>
+    <ion-row class="row m-auto">
+      <ion-button
+        class="bg-success"
+        style="height: 3rem; width: 10rem"
+        (click)="deleteNumber('all')"
+      >
+        C
+      </ion-button>
+      <ion-button
+        class="bg-success"
+        style="height: 3rem; width: 10rem"
+        (click)="deleteNumber('last')"
+      >
+        <-
+      </ion-button>
+    </ion-row>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <ion-row class="row m-auto">
+      <ion-button
+        class="bg-success"
+        style="height: 5rem; width: 5rem"
+        (click)="buttonSelected('7')"
+      >
+        7
+      </ion-button>
+      <ion-button
+        class="bg-success"
+        style="height: 5rem; width: 5rem"
+        (click)="buttonSelected('8')"
+      >
+        8
+      </ion-button>
+      <ion-button
+        class="bg-success"
+        style="height: 5rem; width: 5rem"
+        (click)="buttonSelected('9')"
+      >
+        9
+      </ion-button>
+      <ion-button
+        class="bg-success"
+        style="height: 5rem; width: 5rem"
+        (click)="buttonSelected('/')"
+      >
+        /
+      </ion-button>
+    </ion-row>
+    <ion-row class="row m-auto">
+      <ion-button
+        class="bg-success"
+        style="height: 5rem; width: 5rem"
+        (click)="buttonSelected('4')"
+      >
+        4
+      </ion-button>
+      <ion-button
+        class="bg-success"
+        style="height: 5rem; width: 5rem"
+        (click)="buttonSelected('5')"
+      >
+        5
+      </ion-button>
+      <ion-button
+        class="bg-success"
+        style="height: 5rem; width: 5rem"
+        (click)="buttonSelected('6')"
+      >
+        6
+      </ion-button>
+      <ion-button
+        class="bg-success"
+        style="height: 5rem; width: 5rem"
+        (click)="buttonSelected('*')"
+      >
+        *
+      </ion-button>
+    </ion-row>
+    <ion-row class="row m-auto">
+      <ion-button
+        class="bg-success"
+        style="height: 5rem; width: 5rem"
+        (click)="buttonSelected('1')"
+      >
+        1
+      </ion-button>
+      <ion-button
+        class="bg-success"
+        style="height: 5rem; width: 5rem"
+        (click)="buttonSelected('2')"
+      >
+        2
+      </ion-button>
+      <ion-button
+        class="bg-success"
+        style="height: 5rem; width: 5rem"
+        (click)="buttonSelected('3')"
+      >
+        3
+      </ion-button>
+      <ion-button
+        class="bg-success"
+        style="height: 5rem; width: 5rem"
+        (click)="buttonSelected('-')"
+      >
+        -
+      </ion-button>
+    </ion-row>
+    <ion-row class="row m-auto">
+      <ion-button
+        class="bg-success"
+        style="height: 5rem; width: 5rem"
+        (click)="buttonSelected('0')"
+      >
+        0
+      </ion-button>
+      <ion-button class="bg-success" style="height: 5rem; width: 5rem" (click)="calcOperation()">Enter</ion-button>
+      <ion-button
+        class="bg-success"
+        style="height: 5rem; width: 5rem"
+        (click)="buttonSelected('.')"
+      >
+        .
+      </ion-button>
+      <ion-button
+        class="bg-success"
+        style="height: 5rem; width: 5rem"
+        (click)="buttonSelected('+')"
+      >
+        +
+      </ion-button>
+    </ion-row>
+  </ion-grid>
 </ion-content>
